@@ -11,10 +11,9 @@ const center = {
   lng: -38.523,
 };
 
-
 const MapContainer = () => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyBDmipbXVgQoy_ajNjNQOLn1GMB26gCpzM",
+    googleMapsApiKey: import.meta.env.VITE_GMAPS_API_KEY,
   });
   
   if (!isLoaded) return <Loader />;
